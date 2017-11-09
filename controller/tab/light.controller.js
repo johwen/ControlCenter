@@ -17,7 +17,7 @@ sap.ui.define([
 			var state = {};
 			state.on = oControlEvent.getParameters().state;
 			var lightId = (parseInt(oControlEvent.getParameters().id.charAt(19))+1);
-			this.lightSwitchState(state,lightId, function(){alert("success")}, function(){alert("error")});
+			this.lightSwitchState(state,lightId, function(){}, function(){});
 
 		},
 
