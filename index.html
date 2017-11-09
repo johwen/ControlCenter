@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv='X-UA-Compatible' content='IE=edge' />
+<title>ControlCenter</title>
+
+<script id='sap-ui-bootstrap'
+    src='./UI5/resources/sap-ui-core.js'
+    data-sap-ui-theme='sap_belize'
+    data-sap-ui-libs='sap.m'
+    data-sap-ui-compatVersion='edge'
+    data-sap-ui-resourceroots='{
+        "johwen": "./"
+    }'
+    data-sap-ui-preload='async'>
+</script>
+
+<script>
+    sap.ui.getCore().attachInit(function () {
+	new sap.m.Shell({
+		app : new sap.ui.xmlview({
+            viewName: "johwen.view.ControlCenter"
+        })
+    }).placeAt("content");
+});
+</script>
+
+</head>
+<body id='content' class='sapUiBody'>
+</body>
+</html>

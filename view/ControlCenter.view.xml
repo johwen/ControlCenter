@@ -1,0 +1,72 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc"
+	controllerName="johwen.controller.ControlCenter"	
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+	xmlns:t="sap.ui.table"
+	xmlns:f="sap.ui.layout.form"
+	height="100%">
+	<Page  enableScrolling="true">
+		<content>
+			<VBox fitContainer="true">
+				<f:SimpleForm id="SimpleFormDisplay480"
+					minWidth="1024"
+					maxContainerCols="2"
+					editable="false"
+					layout="ResponsiveGridLayout"
+					labelSpanL="4"
+					labelSpanM="4"
+					emptySpanL="0"
+					emptySpanM="0"
+					columnsL="2"
+					columnsM="2">
+					<f:content>
+						<Text text="Hauptsicherung"/>
+							<Switch 
+							state="{Schlafzimmer>/state/on}"		
+							/>	
+					</f:content>
+					<f:layoutData>
+						<FlexItemData shrinkFactor="0" backgroundDesign="Solid" styleClass="sapContrastPlus"/>
+					</f:layoutData>
+				</f:SimpleForm>
+				<IconTabBar upperCase="true" expandable="false" applyContentPadding="true" stretchContentHeight="true" class="sapUiResponsiveContentPadding">
+					<items>
+						<IconTabFilter text="Modus" icon="sap-icon://home">
+							<mvc:XMLView id="modus.view" viewName="johwen.view.tab.modus"></mvc:XMLView>
+						</IconTabFilter>
+						<IconTabFilter key="light" text="Licht" icon="sap-icon://lightbulb">
+							<mvc:XMLView id="light.view" viewName="johwen.view.tab.light"></mvc:XMLView>
+						</IconTabFilter>
+						<IconTabFilter key="music" text="Musik" icon="sap-icon://sound-loud">
+					    	<mvc:XMLView id="music.view" viewName="johwen.view.tab.music"></mvc:XMLView>
+						</IconTabFilter>
+						<IconTabFilter key="calender" text="Kalender" icon="sap-icon://calendar">
+							<mvc:XMLView id="calendar.view" viewName="johwen.view.tab.calendar"></mvc:XMLView>
+						</IconTabFilter>
+						<IconTabFilter key="melli" text="Melli">
+							<mvc:XMLView id="melli.view" viewName="johwen.view.tab.melli"></mvc:XMLView>
+						</IconTabFilter>
+						<IconTabFilter key="joh" text="Joh">
+							<mvc:XMLView id="joh.view" viewName="johwen.view.tab.joh"></mvc:XMLView>
+						</IconTabFilter>
+					</items>
+					<content>
+						
+					</content>
+					<layoutData>
+						<FlexItemData growFactor="1" baseSize="0%"/>
+					</layoutData>
+				</IconTabBar>
+			</VBox>
+		</content>
+		<footer>
+			<Toolbar>
+				<content>
+					<ToolbarSpacer />
+					<Button text="Grouped View" />
+					<Button text="Classical Table" />
+				</content>
+			</Toolbar>
+		</footer>
+	</Page>
+</mvc:View>

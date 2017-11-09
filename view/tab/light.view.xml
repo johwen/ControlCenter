@@ -1,0 +1,25 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+	xmlns:t="sap.ui.table"
+	xmlns:f="sap.ui.layout.form"
+	height="100%">
+	<Table items="{ path : 'lights>/'}">
+		<columns>
+			<Column>
+				<Text text="Name" />
+			</Column>
+			<Column>
+				<Text text="Status" />
+			</Column>
+		</columns>
+		<items>
+			<ColumnListItem>
+				<cells>
+					<Text text="{lights>name}" />
+					<Switch state="{lights>state/on}"/>
+				 </cells>
+			</ColumnListItem>
+		</items>
+	</Table>
+</mvc:View>
