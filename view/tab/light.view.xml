@@ -3,6 +3,7 @@
 	xmlns:c="sap.ui.core"
 	xmlns:t="sap.ui.table"
 	xmlns:f="sap.ui.layout.form"
+	controllerName="johwen.controller.tab.light"	
 	height="100%">
 	<Table items="{ path : 'lights>/'}">
 		<columns>
@@ -10,14 +11,14 @@
 				<Text text="Name" />
 			</Column>
 			<Column>
-				<Text text="Status" />
+				<Text text="Status"/>
 			</Column>
 		</columns>
 		<items>
 			<ColumnListItem>
 				<cells>
 					<Text text="{lights>name}" />
-					<Switch state="{lights>state/on}"/>
+					<Switch state="{lights>state/on}" change="onLightSwitchChange"/>
 				 </cells>
 			</ColumnListItem>
 		</items>

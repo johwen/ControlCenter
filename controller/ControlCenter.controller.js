@@ -17,7 +17,7 @@ sap.ui.define([
 
         onPlayMusic: function () {
             new sap.ui.model.json.JSONModel('http://192.168.0.249:3001/raumfeld/renderer/Wohnbereich/play')
-        },
+        }
 
 
     });
